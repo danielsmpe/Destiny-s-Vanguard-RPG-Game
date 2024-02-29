@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://375vv1psirgd"
+
+[deps]
+
+files=["res://build/desktop/resources/class.JOBNAME.translation", "res://build/desktop/resources/class.DESCRIPTION.translation", "res://build/desktop/resources/class.SKILLS.translation"]
+
+source_file="res://build/desktop/resources/class.csv"
+dest_files=["res://build/desktop/resources/class.JOBNAME.translation", "res://build/desktop/resources/class.DESCRIPTION.translation", "res://build/desktop/resources/class.SKILLS.translation"]
+
+[params]
+
+compress=true
+delimiter=0
