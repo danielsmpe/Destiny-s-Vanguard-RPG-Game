@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://b34p2g2jjxakb"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_tdwcv"]
+[ext_resource type="Texture2D" uid="uid://bw8d72famvi7x" path="res://resources/bg.jpg" id="2_t4a88"]
+
+[sub_resource type="SystemFont" id="SystemFont_u8s6s"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="Sprite2D" parent="Panel"]
+modulate = Color(0.439216, 0.776471, 0.662745, 0.647059)
+position = Vector2(575.5, 328.5)
+scale = Vector2(1.82698, 1.81389)
+texture = ExtResource("2_t4a88")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+custom_minimum_size = Vector2(700, 50)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -332.0
+offset_top = 63.0
+offset_right = 368.0
+offset_bottom = 166.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = SubResource("SystemFont_u8s6s")
+theme_override_font_sizes/normal_font_size = 75
+theme_override_font_sizes/bold_font_size = 75
+text = "Destiny's Vanguard"
+fit_content = true
+tab_size = 10
+context_menu_enabled = true
+
+[node name="Button" type="Button" parent="."]
+light_mask = 0
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -2.0
+offset_right = 200.0
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.980392, 0, 0.0156863, 1)
+theme_override_font_sizes/font_size = 50
+action_mode = 0
+text = "Start"
+script = ExtResource("1_tdwcv")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
